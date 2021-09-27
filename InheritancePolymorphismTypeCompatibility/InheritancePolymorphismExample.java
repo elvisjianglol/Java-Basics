@@ -20,10 +20,14 @@ public class InheritancePolymorphismExample {
 
     public static void main(String[] args){
         /*
-            Remember that inheritance goes from "broad" to "detailed"
+            Remember that inheritance goes from "broad" to "specialized"
                                                "parent" to "child"
             Not all students are college students
             All college students are students
+
+            Upcasting- results in loss of specialization ex. A ---> B
+            Downcasting- changing reference type to that of a lower one
+            to gain more specialization
 
         */
         // Look at reference's type, it is class A; the instance it is attached to is of Class A as well
@@ -45,7 +49,6 @@ public class InheritancePolymorphismExample {
         // & C's f3() is KEPT (Known as Overriding)
         // However, f4() is inaccessible because Class A doesn't have its own f4 neither can it inherit from parents
         A refA = new C();
-
         refA.f1();//class C
         refA.f2();//inherited f2() from B
         refA.f3();// C's f3() OVERRIDES A's f(3)
